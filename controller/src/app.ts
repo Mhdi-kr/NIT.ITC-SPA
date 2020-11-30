@@ -10,7 +10,7 @@ const { API_VERSION } = process.env;
 
 App.use(morgan('dev'));
 App.use(cors({
-    origin: [/:3000/g],
+    origin: /:3000/,
     credentials: true
 }));
 App.use(Express.json());
