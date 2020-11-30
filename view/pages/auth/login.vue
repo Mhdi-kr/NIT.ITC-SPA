@@ -1,25 +1,27 @@
 <template>
   <div class="login-page">
     <el-card shadow="always" class="login-container slide-in-bck-center">
-          <img :src="require('~/static/images/login.png')" class="image">
-      <el-input
-        placeholder="نام کاربری"
-        class="mb"
-        v-model="auth.username"
-      ></el-input>
-      <el-input
-        placeholder="رمز عبور"
-        class="mb"
-        v-model="auth.password"
-        type="password"
-      ></el-input>
-      <el-button
-        class="has-primary-gradient"
-        type="primary block"
-        @click="authenticate"
-        :loading="button.isLoading"
-        >{{ button.label }}</el-button
-      >
+      <img :src="require('~/static/images/login.png')" class="image" />
+      <form action="submit">
+        <el-input
+          placeholder="نام کاربری"
+          class="mb"
+          v-model="auth.username"
+        ></el-input>
+        <el-input
+          placeholder="رمز عبور"
+          class="mb"
+          v-model="auth.password"
+          type="password"
+        ></el-input>
+        <el-button
+          class="has-primary-gradient"
+          type="primary block"
+          @click="authenticate"
+          :loading="button.isLoading"
+          >{{ button.label }}</el-button
+        >
+      </form>
     </el-card>
   </div>
 </template>

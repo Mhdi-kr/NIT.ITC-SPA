@@ -8,19 +8,16 @@ export default {
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
-    axios: {
-        // TODO base url
-        baseURL: 'http://curli.ir:8080/api/v1/',
-    },
+    modules: ['@nuxtjs/axios', '@nuxtjs/auth', '@nuxtjs/pwa'],
     router: {
         middleware: ['auth'],
     },
     auth: {
         redirect: {
-            login: '/user/login',
-            logout: '/user/logout',
-            callback: '/user/login',
-            home: '/user/panel/overview',
+            login: '/auth/login',
+            logout: '/auth/logout',
+            callback: '/auth/login',
+            home: '/auth/panel/overview',
         },
         strategies: {
             local: {
@@ -31,13 +28,18 @@ export default {
                         propertyName: 'user.token',
                     },
                     // logout: { url: '/api/auth/logout', method: 'post' },
-                    user: { url: '/user/me', method: 'get', propertyName: false },
+                    user: { url: '/auth/panel/', method: 'get', propertyName: false },
                 },
                 tokenRequired: true,
                 tokenType: 'Bearer',
                 globalToken: true,
+                autoFetchUser: false,
             },
         },
+    },
+    axios: {
+        // TODO base url
+        baseURL: 'https://curli.ir:9191/api/v1',
     },
     css: [
         'element-ui/lib/theme-chalk/index.css',
@@ -48,12 +50,6 @@ export default {
     plugins: ['@/plugins/element-ui'],
     components: true,
     buildModules: [],
-    modules: [
-        '@nuxtjs/auth',
-        '@nuxtjs/axios',
-        '@nuxtjs/pwa',
-    ],
-    axios: {},
     build: {
         transpile: [/^element-ui/],
     },
