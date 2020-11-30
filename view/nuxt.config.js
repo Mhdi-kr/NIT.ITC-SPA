@@ -1,47 +1,60 @@
 export default {
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'view',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+    head: {
+        title: 'view',
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: '' },
+        ],
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
+    axios: {
+        // TODO base url
+        baseURL: 'http://curli.ir:8080/api/v1/',
+    },
+    router: {
+        middleware: ['auth'],
+    },
+    auth: {
+        redirect: {
+            login: '/user/login',
+            logout: '/user/logout',
+            callback: '/user/login',
+            home: '/user/panel/overview',
+        },
+        strategies: {
+            local: {
+                endpoints: {
+                    login: {
+                        url: '/user/login',
+                        method: 'post',
+                        propertyName: 'user.token',
+                    },
+                    // logout: { url: '/api/auth/logout', method: 'post' },
+                    user: { url: '/user/me', method: 'get', propertyName: false },
+                },
+                tokenRequired: true,
+                tokenType: 'Bearer',
+                globalToken: true,
+            },
+        },
+    },
+    css: [
+        'element-ui/lib/theme-chalk/index.css',
+        '@/assets/global.scss',
+        '@/assets/animations.scss',
+        '@/assets/gradients.scss',
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    'element-ui/lib/theme-chalk/index.css'
-  ],
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    '@/plugins/element-ui'
-  ],
-
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
-
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-  ],
-
-  // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-  ],
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    transpile: [/^element-ui/],
-  }
+    plugins: ['@/plugins/element-ui'],
+    components: true,
+    buildModules: [],
+    modules: [
+        '@nuxtjs/auth',
+        '@nuxtjs/axios',
+        '@nuxtjs/pwa',
+    ],
+    axios: {},
+    build: {
+        transpile: [/^element-ui/],
+    },
 }

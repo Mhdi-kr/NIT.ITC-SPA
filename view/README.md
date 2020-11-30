@@ -18,3 +18,13 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Roadmap
+
+- [ ] Create pages based on the university document
+- [ ] Create layouts 
+- [ ] Identify each page components and sub components
+- [ ] Develop static pages
+- [ ] Develop login mechanism
+- [ ] Develop admin panel
+- [ ] 
