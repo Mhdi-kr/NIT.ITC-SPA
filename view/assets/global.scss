@@ -1,0 +1,22 @@
+@font-face {
+    font-family: IranSans, serif;
+    src: url('../static/IranSans.ttf');
+}
+
+* {
+    direction: rtl !important;
+    font-family: IranSans;
+    font-size: 13pt;
+}
+
+.mb {
+    margin-bottom: .75rem;
+}
+
+button.block {
+    width: 100% !important;
+}
+
+button i.el-icon-loading {
+    margin-left: 5px;
+}
