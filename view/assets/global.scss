@@ -9,6 +9,11 @@
     font-size: 13pt;
 }
 
+// fixes body intial margin
+body {
+    margin: 0;
+}
+
 .mb {
     margin-bottom: .75rem;
 }
@@ -19,4 +24,20 @@ button.block {
 
 button i.el-icon-loading {
     margin-left: 5px;
+}
+
+// fixing drop down icon spacing for rtl
+i.el-submenu__icon-arrow {
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+// fixing menu spacings
+li.el-menu-item {
+    padding: 0px 15px;
+}
+
+div.el-submenu__title {
+    padding: 0px 0px;
+    padding-right: 15px;
 }

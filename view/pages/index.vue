@@ -1,10 +1,11 @@
 <template>
-  <div class="container">
-
-  </div>
+  <section class="wrapper">
+    <services />
+  </section>
 </template>
 
 <script>
+import Services from '~/components/Services.vue'
 export default {
   name: 'index',
   layout: 'default',

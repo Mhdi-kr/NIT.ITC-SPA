@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76dde8fb-d6f8-4783-bbb2-9f7d1ac06667" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/view/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/pages/auth/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/pages/auth/panel/overview.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/view/pages/index.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lAtZh2lOCdPeJUQqSYxbX8Yg3n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RemoteSynchronizer">
+    <option name="targetMappings">
+      <list>
+        <TargetMappings>
+          <option name="name" value="Default" />
+        </TargetMappings>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76dde8fb-d6f8-4783-bbb2-9f7d1ac06667" name="Default Changelist" comment="" />
+      <created>1607051782702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607051782702</updated>
+      <workItem from="1607051783372" duration="250000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="195" key="#Plugins" timestamp="1607052032262">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="552" y="195" key="#Plugins/1920.24.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1607052032262" />
+    <state x="461" y="199" key="SettingsEditor" timestamp="1607051870553">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="461" y="199" key="SettingsEditor/1920.24.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1607051870553" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1607051877681">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/1920.24.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1607051877681" />
+  </component>
+</project>
