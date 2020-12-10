@@ -1,0 +1,11 @@
+{
+    "main": {
+        "status": true
+    },
+    "network": {
+        "status": true
+    },
+    "database": {
+        "status": false
+    }
+}
