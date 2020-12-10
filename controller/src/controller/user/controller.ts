@@ -4,6 +4,7 @@ import UserService from './service';
 import Validator from '../../utils/Validator';
 import Error from '../../utils/Error';
 import checker from 'validator';
+import User from '../../db/user/model';
 
 class UserController {
 
@@ -38,6 +39,35 @@ class UserController {
             return res.status(200).send({ user: dbResponse });
         } catch (error) {
             return next(error);
+        }
+    }
+    
+    edit: RequestHandler = async (req, res) => {
+        try {
+            const editFields = req.body.fields,
+                { uid } = req.query;
+            if (!uid) {
+                throw 'Provide an id for selecting user';
+            }
+            const dbResponse: User = await UserService.edit(parseInt(uid as string), editFields); 
+            return res.status(200).send(dbResponse);
+        } catch (error) {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+    }
+
+    remove: RequestHandler = async (req, res) => {
+        try {
+            const { uid } = req.query;
+            if (!uid) {
+                throw 'Provide an id for selecting user';
+            }
+            const dbResponse: User = await UserService.remove(parseInt(uid as string));
+            return res.status(200).send(dbResponse);
+        } catch (error) {
+            console.log(error);
+            return res.status(500).send(error);
         }
     }
 }
