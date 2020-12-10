@@ -69,7 +69,7 @@ User.init({
 
 User.prototype.generateToken = async function (): Promise<string> {
     const user = this;
-    const token = jwt.sign({ uniqueId: user.id }, process.env.JWT_SECRET!, { expiresIn: 3600 * 24 * 7 });
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET!, { expiresIn: 3600 * 24 * 7 });
     user.setDataValue('token', token);
     user.tokens = JSON.stringify([...JSON.parse(user.tokens), token]);
     await user.save();
