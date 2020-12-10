@@ -24,6 +24,18 @@ class UserService {
         }
         return dbResponse;
     }
+
+    async edit(target: number | User, input: UserType): Promise<User> {
+        if (input.password) {
+            input.password = bcrypt.hashSync(input.password, 8);
+        }
+        const dbResponse: User = await UserInterface.edit(target, input);
+        return dbResponse;
+    }
+    
+    async remove(target: number): Promise<User> {
+        return await UserInterface.remove(target);
+    }
 }
 
 export default (new UserService());
