@@ -1,11 +1,20 @@
 {
-    "main": {
+    "internet": {
         "status": true
     },
     "network": {
         "status": true
     },
     "database": {
+        "status": false
+    },
+    "email": {
+        "status": true
+    },
+    "infrastructure": {
+        "status": true
+    },
+    "HPC": {
         "status": false
     }
 }
