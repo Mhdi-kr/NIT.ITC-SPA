@@ -3,6 +3,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import Cookies from 'cookie-parser';
 import path from 'path';
+import './db/connection';
+import './db/relation';
 import ROUTES from './routes/routes';
 import ErrorHandler from './middleware/Error';
 
