@@ -8,6 +8,6 @@ DATA_ROUTER.get('/status', DataController.getServerState);
 
 DATA_ROUTER.post('/contact', DataController.addContactMessage);
 
-DATA_ROUTER.post('/cv', Multer, DataController.uploadCv);
+DATA_ROUTER.post('/cv', Multer.single('cv'), DataController.uploadCv);
 
 export default DATA_ROUTER;

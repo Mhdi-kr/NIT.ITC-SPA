@@ -28,7 +28,7 @@ class DataController {
 
     uploadCv: RequestHandler = async (req, res) => {
         try {
-            const dbResponse = await DataService.addContactMessage({ ...req.body, cv: req.file.destination + '/' + req.file.filename });
+            const dbResponse = await DataService.addContactMessage({ ...req.body, cv: req.file.destination.replace('./public/', '') + '/' + req.file.filename });
             return res.status(200).send(dbResponse);
         } catch (error) {
             console.log(error);
