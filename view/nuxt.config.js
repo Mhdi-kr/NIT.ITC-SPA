@@ -1,6 +1,6 @@
 export default {
     head: {
-        title: 'view',
+        title: 'itc.nit.ac.ir',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -10,14 +10,14 @@ export default {
     },
     modules: ['@nuxtjs/axios', '@nuxtjs/auth', '@nuxtjs/pwa'],
     router: {
-        middleware: ['auth'],
+        // middleware: ['auth'],
     },
     auth: {
         redirect: {
-            login: '/auth/login',
-            logout: '/auth/logout',
-            callback: '/auth/login',
-            home: '/auth/panel/overview',
+            login: '/user/login',
+            logout: '/user/logout',
+            callback: '/user/login',
+            home: '/user/panel/overview',
         },
         strategies: {
             local: {
@@ -28,7 +28,7 @@ export default {
                         propertyName: 'user.token',
                     },
                     // logout: { url: '/api/auth/logout', method: 'post' },
-                    user: { url: '/auth/panel/', method: 'get', propertyName: false },
+                    user: false,
                 },
                 tokenRequired: true,
                 tokenType: 'Bearer',
@@ -46,6 +46,8 @@ export default {
         '@/assets/global.scss',
         '@/assets/animations.scss',
         '@/assets/gradients.scss',
+        '@/assets/typography.scss',
+        '@/assets/responsive.scss',
     ],
     plugins: ['@/plugins/element-ui'],
     components: true,

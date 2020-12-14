@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <el-card shadow="always" class="login-container slide-in-bck-center">
-      <img :src="require('~/static/images/login.png')" class="image" />
+      <img :src="require('~/static/images/login.png')" class="image mb-3" />
       <form action="submit">
         <el-input
           placeholder="نام کاربری"
@@ -77,6 +77,7 @@ export default {
     rgba(237, 237, 237, 1) 100%
   );
 }
+/* TODO full screen on mobile */
 .login-container {
   width: 350px;
 }
