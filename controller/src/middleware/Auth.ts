@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 import JWT from 'jsonwebtoken';
 import ExtendedRequest from '../@types/request';
-import UserService from '../controller/user/service';
+import UserInterface from '../db/user/interface';
 
 export default new class {
 
@@ -15,7 +15,7 @@ export default new class {
                 }
             }
             const insideToken = JWT.verify(tokenFromReq, process.env.JWT_SECRET!) as { id: string };
-            const foundUser = await UserService.login({ id: parseInt(insideToken.id) });
+            const foundUser = await UserInterface.getUser({ id: parseInt(insideToken.id) });
 
             req.user = foundUser;
 

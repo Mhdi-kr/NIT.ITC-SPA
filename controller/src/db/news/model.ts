@@ -1,5 +1,10 @@
-import { Model, DataTypes } from 'sequelize';
+import { 
+    Model, 
+    DataTypes,
+    BelongsToSetAssociationMixin
+} from 'sequelize';
 import connection from '../connection';
+import User from '../user/model';
 
 class News extends Model {
     public id!: number;
@@ -8,6 +13,7 @@ class News extends Model {
     public main_image!: string;
     public inner_images!: string | string[];
     public views!: number;
+    public setUser!: BelongsToSetAssociationMixin<User, number>;
 }
 
 News.init({

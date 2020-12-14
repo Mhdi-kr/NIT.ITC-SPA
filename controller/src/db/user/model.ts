@@ -1,7 +1,11 @@
-import { Model, DataTypes } from 'sequelize';
+import { 
+    Model, 
+    DataTypes
+} from 'sequelize';
 import connection from '../connection';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import News from '../news/model';
 
 class User extends Model {
     public id!: number;
