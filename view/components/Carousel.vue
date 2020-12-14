@@ -8,8 +8,10 @@
 
 <style scoped>
 .carousel-image {
+  user-select: none;
   width: 100vw;
   min-height: 100%;
-  bottom: 200px;
+  display:block;
+  margin:auto;
 }
 </style>

@@ -3,7 +3,9 @@
     <carousel />
     <navbar />
     <main class="main">
-      <Nuxt />
+        <div class="container">
+          <Nuxt />
+        </div>
     </main>
     <Footer />
   </div>

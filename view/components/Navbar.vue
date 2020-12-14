@@ -3,20 +3,43 @@
     <el-menu
       :default-active="activeIndex"
       mode="horizontal"
+      style="font-size: 14px !important;"
       @select="handleSelect"
     >
-      <el-menu-item index="1">صفحه اصلی</el-menu-item>
-      <el-submenu index="2">
+      <el-menu-item index="1" class="is-hidden-touch">
+        <nuxt-link to="/">صفحه اصلی</nuxt-link>
+      </el-menu-item>
+
+      <el-submenu class="is-hidden-touch" index="2">
         <template slot="title">معرفی مرکز</template>
-        <el-menu-item index="2-1">مرکز داده دانشگاه</el-menu-item>
-        <el-menu-item index="2-2">افراد</el-menu-item>
+        <el-menu-item index="2-1">
+          <nuxt-link to="/aboutUs">مرکز داده دانشگاه</nuxt-link>
+          </el-menu-item>
+        <el-menu-item index="2-2">
+          <nuxt-link to="/personnel">افراد</nuxt-link>
+          </el-menu-item>
       </el-submenu>
-      <el-menu-item index="3">خدمات</el-menu-item>
-      <el-menu-item index="4">قوانین</el-menu-item>
-      <el-menu-item index="5">پروژه ها</el-menu-item>
-      <el-menu-item index="6">اخبار</el-menu-item>
-      <el-menu-item index="7">راهنما</el-menu-item>
-      <el-menu-item index="8">تماس با ما</el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="3">
+        <nuxt-link to="/services">خدمات</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="4">
+        <nuxt-link to="/terms">قوانین</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="5">
+        <nuxt-link to="/projects">پروژه ها</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="6">
+        <nuxt-link to="/news">اخبار</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="7">
+        <nuxt-link to="/guide">راهنما</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-touch" index="8">
+        <nuxt-link to="/contact">تماس با ما</nuxt-link>
+      </el-menu-item>
+      <el-menu-item class="is-hidden-fullhd is-hidden-widescreen is-hidden-desktop">
+        <i class="el-icon-menu"></i>
+      </el-menu-item>
     </el-menu>
   </nav>
 </template>

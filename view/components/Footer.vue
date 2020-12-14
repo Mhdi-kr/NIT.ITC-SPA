@@ -1,13 +1,19 @@
 <template>
   <footer>
-    <el-card shadow="0">
-      <div class="footer">
-        <div class="centered">asd</div>
-        <div class="centered">asd</div>
-        <div class="centered">asd</div>
+    <el-card shadow="0" style="font-size: 10px;" class="px-6">
+      <div class="columns">
+        <div class="column" style="display: flex; justify-content: center; align-items: center">
+          <nuxt-link to="/aboutUs">مرکز داده دانشگاه</nuxt-link>
+        </div>
+        <div class="column" style="display: flex; justify-content: center; align-items: center">
+          <nuxt-link to="/aboutUs">مرکز داده دانشگاه</nuxt-link>
+        </div>
+        <div class="column" style="display: flex; justify-content: center; align-items: center">
+          <nuxt-link to="/aboutUs">مرکز داده دانشگاه</nuxt-link>
+        </div>
       </div>
     </el-card>
-    <div class="bottom-footer">
+    <div class="bottom-footer"> 
       تمامی حقوق متعلق به مرکز فناوری اطلاعات و ارتباطات دانشگاه صنعتی نوشیروانی
       بابل می باشد.
     </div>
@@ -19,18 +25,6 @@ export default {}
 </script>
 
 <style scoped>
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  padding: 0 60px;
-}
-.centered {
-  display: flex;
-  justify-content: center;
-}
 .bottom-footer {
   opacity: 0.5;
   display: flex;
@@ -41,3 +35,4 @@ export default {}
   background-color: #dcdfe6;
 }
 </style>
+
