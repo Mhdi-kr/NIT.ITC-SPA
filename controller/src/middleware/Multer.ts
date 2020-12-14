@@ -5,17 +5,24 @@ import ExtendedRequest from '../@types/request';
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './public/cvs');
+        switch (file.fieldname) {
+            case 'cv': {
+                return cb(null, './public/cvs');
+            };
+            case 'news': {
+                return cb(null, './public/news');
+            }
+        }
     },
     filename: (req: ExtendedRequest, file, cb) => {
         const extention = file.mimetype.split('/').pop();
         if (!fs.existsSync(path.join(__dirname, `../../public/`))) {
             fs.mkdirSync(path.join(__dirname, `../../public/`));
-            fs.mkdirSync(path.join(__dirname, `../../public/cvs/`));
-        } else if (!fs.existsSync(path.join(__dirname, `../../public/cvs/`))) {
-            fs.mkdirSync(path.join(__dirname, `../../public/cvs/`));
+            fs.mkdirSync(path.join(__dirname, `../../public/${file.fieldname === 'cv' ? 'cv' : 'news'}/`));
+        } else if (!fs.existsSync(path.join(__dirname, `../../public/${file.fieldname === 'cv' ? 'cv' : 'news'}/`))) {
+            fs.mkdirSync(path.join(__dirname, `../../public/${file.fieldname === 'cv' ? 'cv' : 'news'}/`));
         }
-        cb(null, new Date().getTime() + '_CV.' + extention);
+        cb(null, new Date().getTime() + `_${file.fieldname === 'cv' ? 'CV' : 'NEWS'}.` + extention);
     }
 });
 
@@ -31,4 +38,4 @@ const fileFilter = (req: any, file: any, cb: any) => {
     }
 }
 
-export default multer({ storage, fileFilter }).single('cv');
+export default multer({ storage, fileFilter });
