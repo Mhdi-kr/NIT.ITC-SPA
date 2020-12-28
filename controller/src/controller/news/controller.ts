@@ -28,7 +28,7 @@ class NewsController {
         try {
             console.log(req.query);
             const dbResponse = await NewsService.getNews(req.query);
-            return res.status(201).send(dbResponse);
+            return res.status(200).send(dbResponse);
         } catch (error) {
             console.log(error);
             return res.status(500).send(error);
