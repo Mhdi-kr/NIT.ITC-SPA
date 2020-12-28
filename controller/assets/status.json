@@ -1,20 +1,26 @@
-{
-    "internet": {
+[
+    {
+        "name": "Internet",
         "status": true
     },
-    "network": {
+    {
+        "name": "Network",
         "status": true
     },
-    "database": {
+    {
+        "name": "Database",
         "status": false
     },
-    "email": {
+    {
+        "name": "Email",
         "status": true
     },
-    "infrastructure": {
+    {
+        "name": "Infrastructure",
         "status": true
     },
-    "HPC": {
+    {
+        "name": "HPC",
         "status": false
     }
-}
+]
